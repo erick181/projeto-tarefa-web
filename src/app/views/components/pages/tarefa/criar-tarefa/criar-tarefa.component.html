@@ -1,0 +1,14 @@
+<form class="form">
+    <h1 style="margin-top: 20px;">{{titulo}} Tarefa</h1>
+    <mat-form-field class="form-group">
+      <mat-label>Título</mat-label>
+      <input matInput   name="titulo" [(ngModel)]="tarefa.titulo">
+     </mat-form-field>
+    <mat-form-field class="form-group">
+        <mat-label>Descrição</mat-label>
+        <input matInput  name="descricao" [(ngModel)]="tarefa.descricao">
+    </mat-form-field>
+
+    <button mat-stroked-button color="accent" (click)="criar_atualizar()">{{titulo}}</button>
+    <button mat-stroked-button color="warn" (click)="cancel()" style="margin-left: 6px;">Cancelar</button>
+  </form>
